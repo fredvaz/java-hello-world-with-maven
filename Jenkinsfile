@@ -16,19 +16,12 @@ pipeline
             {
                 sh 'mvn test'
             }
-            post 
-            {
-                always 
-                {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
         }
-        stage('Deliver') 
+        stage('Complete') 
         {
             steps 
             {
-                sh './jenkins/scripts/deliver.sh'
+                echo 'Job Completed!'
             }
         }
     }
