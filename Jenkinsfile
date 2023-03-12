@@ -17,12 +17,5 @@ pipeline
                 sh 'mvn test'
             }
         }
-        stage('Complete') 
-        {
-            steps 
-            {
-                echo 'Job Completed!'
-            }
-        }
     }
 }
